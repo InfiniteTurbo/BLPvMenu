@@ -204,8 +204,8 @@ namespace vMenuClient
                 // If the player is not set as invisible by PlayerOptions or if the noclip entity is not the player ped, reset the visibility
                 if (MainMenu.PlayerOptionsMenu == null || (!MainMenu.PlayerOptionsMenu.PlayerInvisible || (MainMenu.PlayerOptionsMenu.PlayerInvisible && noclipEntity == Game.PlayerPed.Handle)))
                 {
-                    SetEntityVisible(noclipEntity, true, false);
-                    SetLocalPlayerVisibleLocally(true);
+                    SetEntityVisible(noclipEntity, false, false);
+                    SetLocalPlayerVisibleLocally(false);
                 }
 
                 // Always reset the alpha.
